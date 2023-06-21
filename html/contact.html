@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="formulaire, cv, candidature, infolettre">
+        <meta name="author" content="anais mannee-batschy">
+        <link href="../medias/favicon.png" rel="icon" type="image/png">
+        <link href="../css/styles.css" rel="stylesheet" type="text/css">
+        <title>Contact</title>
+    </head>
+    <body class="body__contact">
+        <header class="header">
+            <nav class="navigationPrincipale">
+                <ul class="navigationPrincipale__menu">                
+                    <li class="navigationPrincipale__item">
+                        <a class="navigationPrincipale__lien" href="../index.html">Destination Europe</a>
+                    </li>
+                    <li class="navigationPrincipale__item">
+                        <a class="navigationPrincipale__lien" href="">Articles</a>
+                        <ul class="navigationSecondaire__menu">
+                            <li class="navigationSecondaire__item">
+                                <a class="navigationSecondaire__lien" href="./article1.html">La France</a>
+                            </li>
+                            <li class="navigationSecondaire__item">
+                                <a class="navigationSecondaire__lien" href="./article2.html">L'Espagne</a>
+                            </li>
+                            <li class="navigationSecondaire__item">
+                                <a class="navigationSecondaire__lien" href="./article3.html">La Grèce</a>
+                            </li>
+                            <li class="navigationSecondaire__item">
+                                <a class="navigationSecondaire__lien" href="./article4.html">La République Tchèque</a>
+                            </li>
+                            <li class="navigationSecondaire__item">
+                                <a class="navigationSecondaire__lien" href="./article5.html">La Suède</a>
+                            </li>
+                            <li class="navigationSecondaire__item">
+                                <a class="navigationSecondaire__lien" href="./article6.html">La Russie</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigationPrincipale__item">
+                        <a class="navigationPrincipale__lien" href="./apropos.html">À propos</a>
+                    </li>
+                    <li class="navigationPrincipale__item">
+                        <a class="navigationPrincipale__lien" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article class="contact__article">
+            <div class="enTete__conteneur">
+            <picture class="enTete__picture">
+                <source class="enTete__sourceUn" srcset="../images/contact_en-tete_w500.jpg" media="(max-width: 320px)">
+                <source class="enTete__sourceDeux" srcset="../images/contact_en-tete_w1020.jpg" media="(min-width: 321px)">
+                <source class="enTete__sourceTrois" srcset="../images/contact_en-tete_w1920.jpg" media="(min-width: 768px)">
+                <img class="enTete__image" src="../images/contact_en-tete_w500.jpg" alt="Ciel rose surplombant des voies de chemins de fer">
+            </picture>
+            </div>
+            <div class="hautDePage">
+                <h1 class="hautDePage__titre-principal">Formulaire</h1>
+            </div>
+            
+            <p class="contact__paragraphe">
+                Si vous êtes intéressés à faire partie de l'aventure, soumettez votre C.V. <br/>On ne sait jamais vous serez peut-être la prochaine addition à notre équipe.
+            </p>
+            <form class="formulaire" action="traitement.php" method="post">
+                <fieldset class="formulaire__fieldset">
+                    <legend class="formulaire__legend">Informations</legend>
+                    <label class="formulaire__label" for="nom">Nom</label><br>
+                    <input class="formulaire__inputText" type="text" name="nom" id="nom">
+                    <br/>
+                    <label class="formulaire__label" for="prenom">Prénom</label><br>
+                    <input class="formulaire__inputText" type="text" name="prenom" id="prenom">    
+                </fieldset>
+
+                <fieldset class="formulaire__fieldset">
+                    <legend class="formulaire__legend">Adresse </legend>
+                    <label class="formulaire__label" for="Rue">Rue</label><br>
+                    <input class="formulaire__inputText" type="text" name="adress" id="adresse">
+                    <br/>
+                    <div class="formulaire__ctnAdresse">
+                        <label class="formulaire__label" for="ville">Ville</label><br>
+                        <input class="formulaire__inputText formulaire__inputText-ville" type="text" name="ville" id="ville">
+                        <br/>
+                        <label class="formulaire__label" for="province">Province</label><br>
+                        <select class="formulaire__select formulaire__select-province" name="listeprovince" id="province">
+                            <option class="formulaire__selectOption" value="Quebec">Québec</option>
+                            <option class="formulaire__selectOption" value="Ontario">Ontario</option>
+                            <option class="formulaire__selectOption" value="Colombie-Britannique">Colombie-Britannique</option>
+                            <option class="formulaire__selectOption" value="Alberta">Alberta</option>
+                        </select>
+                        <br/>
+                        <label class="formulaire__label" for="codepostal">Code postal</label><br>
+                        <input class="formulaire__inputText formulaire__inputText-cp" type="text" name="codepostal" id="codepostal">
+                    </div>
+                </fieldset>
+
+                <fieldset class="formulaire__fieldset">
+                    <legend class="formulaire__legend">Contacts</legend>
+                    <label class="formulaire__label" for="telephone">Téléphone</label><br>
+                    <input class="formulaire__inputText" type="text" name="telephone" id="telephone">
+                    <br/>
+                    <label class="formulaire__label" for="courriel">Courriel</label><br>
+                    <input class="formulaire__inputEmail" type="email" name="courriel" id="courriel">
+                </fieldset>
+
+                <fieldset class="formulaire__fieldset">
+                    <legend class="formulaire__legend">Service</legend>
+                    <p class="paragraphe-formulaire">Comment souhaitez-vous nous aider?</p>
+                    <input class="formulaire__checkbox"  type="checkbox" name="aide" value="redaction" id="redaction">
+                    <label class="formulaire__label">Rédaction</label>
+                    <br/>
+                    <input class="formulaire__checkbox" type="checkbox" name="aide" value="benevolat" id="benevolat">
+                    <label class="formulaire__label">Bénévolat</label>
+                    <br/>
+                    <input class="formulaire__checkbox" type="checkbox" name="aide" value="vente" id="vente">
+                    <label class="formulaire__label">Vente</label>
+                    <br/>
+                    <input class="formulaire__checkbox" type="checkbox" name="aide" value="ti" id="ti">
+                    <label class="formulaire__label">TI</label>
+                    <br/>
+                    <input class="formulaire__checkbox" type="checkbox" name="aide" value="communication" id="communication">
+                    <label class="formulaire__label">Communication</label> 
+                </fieldset>
+
+                <fieldset class="formulaire__fieldset">
+                    <legend class="formulaire__legend">Présentation</legend>
+                    <label class="formulaire__label" for="presentation">Pourquoi êtes-vous la perle rare?</label> <br/>
+                    <textarea class="formulaire__inputTextArea" name="presentation">Présentez-vous en quelques mots</textarea>
+                </fieldset>
+
+                <fieldset class="formulaire__fieldset">
+                    <p class="paragraphe-formulaire">Comment avez-vous entendu parler de nous?</p>
+                    <input type="radio" name="partenaire" id="partenaire">
+                    <label class="formulaire__label" for="autre">Sites partenaires</label>
+                    <br/>
+                    <input type="radio" name="tv" id="tv">
+                    <label class="formulaire__label" for="tv">TV</label>
+                    <br/>
+                    <input type="radio" name="facebook" id="facebook">
+                    <label class="formulaire__label" for="facebook">Facebook</label>
+                    <br/>
+                    <input type="radio" name="instagram" id="instagram">
+                    <label class="formulaire__label" for="instagram">Instagram</label>
+                    <br/>
+                    <input type="radio" name="youtube" id="youtube">
+                    <label class="formulaire__label" for="youtube">Youtube</label>
+                    <br/>
+                    <input type="radio" name="autre" id="autre">
+                    <label class="formulaire__label" for="autre">Autre</label>
+                </fieldset>
+
+                <fieldset class="formulaire__fieldset">
+                    <p class="paragraphe-formulaire">Faites nous parvenir votre CV</p>
+                    <input class="formulaire__inputFile" type="file" name="cv" id="cv"> <br/>
+                    <input class="formulaire__inputSubmit" type="submit" value="Envoyer mon C.V" id="submitcv">
+                </fieldset>
+            </form>
+        </article>
+    </body>
+    <div class="separateur"></div>
+    <footer class="footer">
+        <div class="footerPrincipal">
+            <p class="footerPrincipal__paragraphe">Suivez-nous sur les réseaux sociaux!</p>
+            <ul class="reseauSociaux__menu">
+                <li class="reseauSociaux__item">
+                    <a class="reseauSociaux__lien" href="https://www.facebook.com">Facebook</a>
+                </li>
+                <li class="reseauSociaux__item">
+                    <a class="reseauSociaux__lien" href="https://www.instagram.com/">Instagram</a>
+                </li>
+                <li class="reseauSociaux__item">
+                    <a class="reseauSociaux__lien" href="https://www.twitter.com">Twitter</a>
+                </li>
+                <li class="reseauSociaux__item">
+                    <a class="reseauSociaux__lien" href="https://www.youtube.com">Youtube</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footerSecondaire">
+            <p class="footerSecondaire__paragraphe">Ne manquez plus aucune publication! Abonnez-vous!</p>
+            <input class="footerSecondaire__courriel" type="text" name="abonnement" value="Entrez votre courriel" id="abonnement">
+            <input class="footerSecondaire__abonnement" type="submit" value="Envoyer" id="envoyer">
+        </div>
+    </footer>
+    <small class="copyright">© 2021 Anaïs Mannée-Batschy</small>
+</html>
